@@ -18,6 +18,7 @@ const HomeScreen = ({ navigation }) => {
                   <View>
                       <Image source={item.image} style={styles.AllBookImage}/>
                       <Text style={styles.BookTitle}>{item.title}</Text>
+                      <Text style={styles.BookAuthor}>{item.author}</Text>
                   </View>
               </TouchableOpacity>
           </View>
@@ -32,6 +33,7 @@ const HomeScreen = ({ navigation }) => {
                     <View>
                         <Image source={item.image} style={styles.BookImage}/>
                         <Text style={styles.BookTitle}>{item.title}</Text>
+                        <Text style={styles.BookAuthor}>{item.author}</Text>
                     </View>
                 </TouchableOpacity>
             </View>
@@ -46,6 +48,7 @@ const HomeScreen = ({ navigation }) => {
                   <View>
                       <Image source={item.image} style={styles.BookImage}/>
                       <Text style={styles.BookTitle}>{item.title}</Text>
+                      <Text style={styles.BookAuthor}>{item.author}</Text>
                   </View>
               </TouchableOpacity>
           </View>
@@ -104,7 +107,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
         </View>
           <View style={styles.headerWrapper}>
-            <Text style={styles.headerText}>Favoutite Books Library</Text>
+            <Text style={styles.headerText}>Favourite Books Library</Text>
           </View>
         </SafeAreaView>
         {/* FlatList */}
@@ -156,7 +159,7 @@ const styles = StyleSheet.create({
   },
   CategoryTitle: {
     alignSelf: 'center',
-    marginTop: 20,
+    marginTop: 5,
     marginBottom: 5,
     fontSize: 30,
     fontWeight: "bold",
@@ -202,11 +205,16 @@ const styles = StyleSheet.create({
     borderRadius: 7
   },
   BookTitle: {
-    alignSelf: 'center',
+    // alignSelf: 'center',
     marginTop: 5,
     color: colors.textDark,
     fontSize: 13,
     fontWeight: 'bold'
+  },
+  BookAuthor: {
+    // alignSelf: 'center',
+    color: colors.textLight,
+    fontSize: 10,
   },
   scrollHome: {
     backgroundColor: colors.white,
@@ -233,13 +241,17 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   searchWrapper: {
-    marginTop: 15,
+    marginVertical: 10,
     marginHorizontal: 20,
     backgroundColor: '#F8F8F8',
     paddingVertical: 15,
     borderRadius: 20,
     flexDirection: 'row',
     alignContent: 'center',
+    shadowColor: 'black',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.3,
+    elevation: 6,
   },
   headerIcon: {
     height:25,

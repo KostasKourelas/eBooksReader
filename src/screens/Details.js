@@ -14,12 +14,26 @@ const DetailsScreen = ( { navigation } ) => {
     return (
         <View style={styles.containerDetails}>
             <ScrollView style={styles.scrollView}>
-                <ImageBackground style={styles.HeaderDetails} source={item.image} blurRadius={1} resizeMode='cover' imageStyle={{ borderBottomLeftRadius: 50,
-        borderBottomRightRadius: 50,}}>
+                <ImageBackground style={styles.HeaderDetails} source={item.image} blurRadius={4} resizeMode='cover' imageStyle={{ borderBottomLeftRadius: 40,
+        borderBottomRightRadius: 40,}}>
                     <Text style={styles.TitleBook}>{item.title}</Text>  
                     <Text style={styles.authorText}>{item.author}</Text>
                 </ImageBackground>
                 <Image source={item.image} style={styles.ImageBook}/>
+                <View style={styles.DetailsSubContainer}>
+                    <View style={styles.DetailsSubWrapper}>
+                        <Text>{item.year}</Text>
+                        <Text style={styles.DetailsText}>Year</Text>
+                    </View>
+                    <View style={styles.DetailsSubWrapper}>
+                        <Text>{item.language}</Text>
+                        <Text style={styles.DetailsText}>Language</Text>
+                    </View>
+                    <View style={styles.DetailsSubWrapper}>
+                        <Text>{item.pages}</Text>
+                        <Text style={styles.DetailsText}>Pages</Text>
+                    </View>
+                </View>
                 <Text style={styles.Syno}>Synopsis</Text>
                 <Text style={styles.synopsisText}>{item.synopsis}</Text>
                 <TouchableOpacity style={styles.buttonBG} onPress={()=> OpenAnything.Pdf(item.pdf)}>
@@ -64,7 +78,7 @@ const styles = StyleSheet.create({
         paddingLeft:20,
         paddingRight: 10,
         marginTop: 15,
-        fontSize: 18
+        fontSize: 18,
     },
     Syno: {
         marginTop: 25,
@@ -91,12 +105,36 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginVertical: 30,
         marginHorizontal: 60,
-        borderRadius: 10
+        borderRadius: 10,
+        borderWidth: 1,
     },
     readText: {
         fontSize: 18,
         marginLeft: 7,
         fontWeight: 'bold'
+    },
+    DetailsSubContainer: {
+        marginHorizontal: 20,
+        marginTop: 20,
+        padding: 20,
+        borderRadius: 9,
+        backgroundColor: colors.primary, 
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+    },
+    DetailsSubWrapper: {
+        margin: 10,
+        borderWidth: 1,
+        flex: 1,
+        borderRadius: 9,
+        alignItems: 'center',
+        padding: 8,
+        backgroundColor: colors.white,
+    },
+    DetailsText: {
+        fontSize: 10,
+        color: colors.textLight
     }
   });
 

@@ -19,6 +19,7 @@ const navigator = createStackNavigator (
     initialRouteName: "Home",
     defaultNavigationOptions: {
       title: "eBook-Reader App",
+      // headerTransparent: true
       // headerRight
     },
   }

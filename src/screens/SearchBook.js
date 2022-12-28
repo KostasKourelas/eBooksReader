@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { View, Image, SafeAreaView, Text, StyleSheet, TouchableOpacity, ImageBackground, TextInput } from 'react-native';
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import colors from '../../assets/colors/colors';
-import BooksData from '../../assets/data/BooksData';
-import AllBooksData from '../../assets/data/AllBooksData';
-
 
 
 const SearchBooksScreen = ( { navigation } ) => {
@@ -56,7 +53,7 @@ const SearchBooksScreen = ( { navigation } ) => {
             <View style={styles.BookWrapper}>
                 <TouchableOpacity onPress={() => navigation.navigate('Details', {item: item}) } >
                     <View style={styles.ItemWrapper}>
-                        <Image source={item.imageLink} style={styles.AllBookImage}/>
+                        <Image source={{uri:item.imageLink}} style={styles.AllBookImage}/>
                         <Text style={styles.BookTitle}>{item.title}</Text>
                     </View>
                 </TouchableOpacity>
@@ -115,13 +112,17 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   searchWrapper: {
-    marginTop: 15,
+    marginVertical: 10,
     marginHorizontal: 20,
     backgroundColor: '#F8F8F8',
     paddingVertical: 15,
     borderRadius: 20,
     flexDirection: 'row',
     alignContent: 'center',
+    shadowColor: 'black',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.3,
+    elevation: 6,
   },
   headerIcon: {
     height:25,

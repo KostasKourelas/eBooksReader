@@ -2,6 +2,9 @@ const BooksData = [
     {
       id: '1',
       image: require('../images/Cradle-of-the-Gods.png'),
+      language: "English",
+      pages: 209,
+      year: 2000,
       pdf: ("https://github.com/KostasKourelas/kostaskourelas.github.io/raw/main/eBooks-pdfs/Cradle-of-the-Gods.pdf"),
       title: 'Cradle of the Gods',
       author: 'Thomas Quinn Miller',
@@ -10,6 +13,9 @@ const BooksData = [
     {
       id: '2',
       image: require('../images/harry_potter_and_the_half_blood_prince.png'),
+      language: "English",
+      pages: 140,
+      year: 2000,
       pdf: ("https://github.com/KostasKourelas/kostaskourelas.github.io/raw/main/eBooks-pdfs/Harry-Potter-and-the-Half-Blood-Prince.pdf"),
       title: 'Half Blood Prince',
       author: 'J. K. Rowling',
@@ -18,6 +24,9 @@ const BooksData = [
     {
       id: '3',
       image: require('../images/Harry-Potter-and-the-Deathly-Hallows.png'),
+      language: "English",
+      pages: 223,
+      year: 2000,
       pdf: ("https://github.com/KostasKourelas/kostaskourelas.github.io/raw/main/eBooks-pdfs/Harry-Potter-and-the-Deathly-Hallows.pdf"),
       title: 'Deathly Hallows',
       author: 'J. K. Rowling',
@@ -26,6 +35,9 @@ const BooksData = [
     {
       id: '4',
       image: require('../images/Harry-Potter-and-the-Order-of-the-Phoenix.png'),
+      language: "English",
+      pages: 211,
+      year: 2000,
       pdf: ("https://github.com/KostasKourelas/kostaskourelas.github.io/raw/main/eBooks-pdfs/Harry-Potter-and-the-Order-of-the-Phoenix.pdf"),
       title: 'Order of the Phoenix',
       author: 'J. K. Rowling',
@@ -34,6 +46,9 @@ const BooksData = [
     {
         id: '5',
         image: require('../images/Maze-Runner.png'),
+        language: "English",
+        pages: 312,
+        year: 2000,
         pdf: ("https://github.com/KostasKourelas/kostaskourelas.github.io/raw/main/eBooks-pdfs/the_maze_runner.pdf"),
         title: 'Maze Runner',
         author: 'James Dashner',
@@ -42,6 +57,9 @@ const BooksData = [
     {
       id: '6',
       image: require('../images/Ice-Crown.png'),
+      language: "English",
+      pages: 319,
+      year: 2000,
       pdf: ("https://github.com/KostasKourelas/kostaskourelas.github.io/raw/main/eBooks-pdfs/Ice-Crown.pdf"),
       title: 'Ice Crown',
       author: 'Kay L Moody',

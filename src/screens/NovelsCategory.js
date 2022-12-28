@@ -27,7 +27,7 @@ const NovelsCategoryScreen = ( { navigation } ) => {
 
     return (
         <View style={styles.BgScreen}>
-          <Text style={styles.headerTextCategory}>Novels History</Text>
+          <Text style={styles.headerTextCategory}>Novels</Text>
             <FlatGrid
               keyExtractor={AllBooksData.name}
               itemDimension={130}
